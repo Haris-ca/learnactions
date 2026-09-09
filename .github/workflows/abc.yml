@@ -25,3 +25,23 @@ jobs:
         run:  date
       - name: End of Pipeline Finish
         run: echo "Workflow Completed Successfully"
+  job2name:
+    runs-on: ubuntu-latest
+    env:
+      PROJECT: Git-Hub Actions Practice
+    
+    steps:
+      - name: Checkout Reppository
+        uses: actions/checkout@v4
+
+      - name: Print Project name
+        run:  echo "$PROJECT2"
+      
+      - name: Print the present Working Directory
+        run:  pwd
+      - name: List Files
+        run: ls -l
+      - name: Display Date
+        run:  date
+      - name: End of Pipeline Finish
+        run: echo "Workflow Completed Successfully"
